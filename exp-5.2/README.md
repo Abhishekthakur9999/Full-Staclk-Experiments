@@ -1,70 +1,157 @@
-# Getting Started with Create React App
+# Experiment 5.2 – Route-Based Lazy Loading in SPA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 👨‍🎓 Student Information
 
-## Available Scripts
+Name: Abhishek Thakur  
+UID: 23BAI71440  
+Course: Full Stack Development  
+Experiment No: 5.2  
+Project Name: exp-5.2 
 
-In the project directory, you can run:
+---
 
-### `npm start`
+# 🎯 Aim
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To implement route-based lazy loading in a Single Page Application (SPA) using React.js in order to improve performance by loading route components only when required.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+# 🛠 Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js
+- React Router DOM
+- JavaScript
+- HTML & CSS
+- VS Code
+- Node.js
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 📚 Theory
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Lazy loading is a performance optimization technique in which components are loaded only when needed instead of loading all components at once.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In a Single Page Application (SPA), multiple routes exist (like Home, About, Dashboard). If we load all route components at startup, the application becomes heavy and slower.
 
-### `npm run eject`
+Using:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `React.lazy()` → to dynamically import components
+- `Suspense` → to display a loading message while component loads
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+we reduce initial bundle size and improve application speed.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This is called **Route-Based Lazy Loading**.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+# ⚙️ Procedure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Created a React application using:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Installed React Router:
 
-### Code Splitting
+3. Created three route components:
+- Home
+- About
+- Dashboard
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Applied `React.lazy()` to dynamically import route components.
 
-### Analyzing the Bundle Size
+5. Wrapped all routes inside `Suspense` component.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+6. Ran the project.
 
-### Making a Progressive Web App
+   
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# 🧠 Working Explanation
 
-### Advanced Configuration
+- When the application starts, no route components are loaded immediately.
+- When user clicks Home → Home component loads dynamically.
+- When user clicks About → About component loads dynamically.
+- When user clicks Dashboard → Dashboard component loads dynamically.
+- During loading, Suspense shows:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  "Lazy Loading..."
 
-### Deployment
+This proves that route components are loaded only when accessed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+----------
 
-### `npm run build` fails to minify
+## 1️⃣ Home Page Output
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+After clicking "Home", the Home page is loaded dynamically.
+
+<img width="1600" height="822" alt="image" src="https://github.com/user-attachments/assets/f496609e-6114-4f40-93b7-abbd188d8f5a" />
+
+
+Example Description:
+- Displays student name
+- Displays UID
+- Modern card UI
+
+---
+
+## 2️⃣ Lazy Loading Screen
+
+When navigating between routes, the following loading screen appears:
+
+<img width="1600" height="798" alt="image" src="https://github.com/user-attachments/assets/11e4f85d-7808-4768-a6fc-1c1adcea82e0" />
+
+
+Screen shows:
+"Lazy Loading..."
+
+This confirms Suspense fallback is working.
+
+---
+
+## 3️⃣ About Page Output
+
+After clicking "About":
+
+<img width="1600" height="655" alt="image" src="https://github.com/user-attachments/assets/1676abf6-03c7-4053-aca6-3a1a8d25f77d" />
+
+
+- Explains experiment
+- Loaded only when route is accessed
+
+---
+
+## 4️⃣ Dashboard Page Output
+
+After clicking "Dashboard":
+
+<img width="1600" height="672" alt="image" src="https://github.com/user-attachments/assets/886a9deb-0d51-42f0-8eff-b2cb5e4f1ba7" />
+
+
+- Displays Skills section
+- Loaded dynamically using React.lazy()
+
+
+
+# 📊 Performance Benefit
+
+Without Lazy Loading:
+- All components load at startup
+- Large bundle size
+- Slower initial load
+
+With Route-Based Lazy Loading:
+- Components load only when needed
+- Reduced initial bundle size
+- Faster startup time
+- Better performance
+
+
+# ✅ Result
+
+Route-Based Lazy Loading was successfully implemented in the React Single Page Application using React.lazy() and Suspense.
+
+All route components are loaded dynamically when accessed, improving performance and reducing initial load time.
+
+
+# 🚀 Conclusion
+
+This experiment demonstrates how route-based lazy loading improves performance in React applications by dynamically loading route components only when needed.
+
+The implementation was successful and working correctly.
