@@ -81,7 +81,7 @@ This proves that route components are loaded only when accessed.
 
 After clicking "Home", the Home page is loaded dynamically.
 
-<img width="1600" height="655" alt="image" src="https://github.com/user-attachments/assets/28fff2ff-151d-4dd5-904d-236616827d1e" />
+<img width="1914" height="891" alt="image" src="https://github.com/user-attachments/assets/2d423761-5e17-4fc9-9f9c-6fcce8f02a1c" />
 
 
 Example Description:
@@ -95,7 +95,7 @@ Example Description:
 
 When navigating between routes, the following loading screen appears:
 
-<img width="1600" height="798" alt="image" src="https://github.com/user-attachments/assets/11e4f85d-7808-4768-a6fc-1c1adcea82e0" />
+<img width="1906" height="910" alt="image" src="https://github.com/user-attachments/assets/48478c18-0d9a-4434-87cf-0f1677ac2008" />
 
 
 Screen shows:
@@ -109,7 +109,7 @@ This confirms Suspense fallback is working.
 
 After clicking "About":
 
-<img width="1600" height="672" alt="image" src="https://github.com/user-attachments/assets/987abacc-5a7d-47b8-98b0-1ed18b82c0fe" />
+<img width="1908" height="897" alt="image" src="https://github.com/user-attachments/assets/358558f4-c563-47f4-861a-3d9798817cc0" />
 
 
 - Explains experiment
@@ -121,7 +121,7 @@ After clicking "About":
 
 After clicking "Contact":
 
-<img width="1916" height="900" alt="image" src="https://github.com/user-attachments/assets/96fc235d-4ff6-4ff7-839b-388d9c993488" />
+<img width="1915" height="904" alt="image" src="https://github.com/user-attachments/assets/31e42081-bde4-4395-bea4-d7265b0b1a41" />
 
 
 
